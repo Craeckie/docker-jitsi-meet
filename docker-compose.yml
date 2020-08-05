@@ -119,8 +119,10 @@ services:
             - "traefik.docker.network=proxy_net"
             - "traefik.http.routers.jitsi.rule=Host(`thecracks.de`,`www.thecracks.de`)"
             - "traefik.http.routers.jitsi.entrypoints=https"
-            - "traefik.http.routers.jitsi.tls.certresolver=letsencrypt"
+            - "traefik.http.routers.jitsi.tls.certresolver=netcup"
             - "traefik.http.routers.jitsi.tls.options=tls12@file"
+            - "traefik.http.routers.jitsi.tls.domains[0].main=thecracks.de"
+            - "traefik.http.routers.jitsi.tls.domains[0].sans=*.thecracks.de"
 
     # XMPP server
     prosody:
