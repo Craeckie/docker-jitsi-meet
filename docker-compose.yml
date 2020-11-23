@@ -1,4 +1,4 @@
-version: '3'
+version: '3.8'
 services:
     # Frontend
     web:
@@ -124,6 +124,8 @@ services:
             - "traefik.http.routers.jitsi.tls.domains[0].main=thecracks.de"
             - "traefik.http.routers.jitsi.tls.domains[0].sans=*.thecracks.de"
 
+        stop_grace_period: 30s
+
     # XMPP server
     prosody:
         image: jitsi/prosody:latest
@@ -193,6 +195,8 @@ services:
                 aliases:
                     - ${XMPP_SERVER}
 
+        stop_grace_period: 30s
+
     # Focus component
     jicofo:
         image: jitsi/jicofo:latest
@@ -240,6 +244,9 @@ services:
         networks:
             meet.jitsi:
 
+        stop_grace_period: 30s
+
+
     # Video bridge
     jvb:
         image: jitsi/jvb:latest
@@ -281,6 +288,8 @@ services:
                 aliases:
                     - jvb.meet.jitsi
 
+        stop_grace_period: 30s
+
     # Broadcasting
     jibri:
         image: jitsi/jibri:latest
@@ -317,6 +326,8 @@ services:
             - jicofo
         networks:
             meet.jitsi:
+
+        stop_grace_period: 30s
 
 # Custom network so all services can communicate using a FQDN
 networks:
