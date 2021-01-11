@@ -724,6 +724,8 @@ config.disableAP = false;
 config.stereo = false;
 config.startAudioOnly = false;
 config.startAudioMuted = 10;
+config.disableAudioLevels = false;
+config.enableNoisyMicDetection = true;
 
 
 // Peer-to-Peer options.
@@ -774,6 +776,12 @@ config.enableCalendarIntegration = false;
 
 // Prejoin page.
 config.prejoinPageEnabled = false;
+
+// Welcome page.
+config.enableWelcomePage = true;
+
+// Close page.
+config.enableClosePage = false;
 
 // Require users to always specify a display name.
 config.requireDisplayName = false;
