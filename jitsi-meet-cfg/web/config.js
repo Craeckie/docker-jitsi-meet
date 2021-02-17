@@ -736,7 +736,7 @@ config.disableAP = false;
 config.stereo = false;
 config.startAudioOnly = false;
 config.startAudioMuted = 10;
-config.disableAudioLevels = false;
+config.disableAudioLevels = true;
 config.enableNoisyMicDetection = true;
 
 
@@ -751,16 +751,9 @@ config.p2p.enabled = true;
 // Etherpad
 //
 
+config.etherpad_base = 'https://thecracks.de/etherpad/p/';
 // Recording.
 //
-
-config.hiddenDomain = 'recorder.meet.jitsi';
-
-// Whether to enable file recording or not
-config.fileRecordingsEnabled = true;
-
-// Whether to enable live streaming or not.
-config.liveStreamingEnabled = true;
 
 // Analytics.
 //
