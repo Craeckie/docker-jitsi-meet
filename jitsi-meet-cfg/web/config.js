@@ -851,6 +851,7 @@ config.constraints.video.height = { ideal: 720, max: 720, min: 180 };
 config.constraints.video.width = { ideal: 1280, max: 1280, min: 320};
 config.disableSimulcast = false;
 config.startVideoMuted = 10;
+config.startWithVideoMuted = false;
 
 // ScreenShare Configuration.
 //
@@ -865,6 +866,8 @@ config.disableAP = false;
 config.stereo = false;
 config.startAudioOnly = false;
 config.startAudioMuted = 10;
+config.startWithAudioMuted = false;
+config.startSilent = false;
 config.disableAudioLevels = true;
 config.enableNoisyMicDetection = true;
 
