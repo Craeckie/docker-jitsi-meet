@@ -485,7 +485,7 @@ var config = {
         stunServers: [
 
             // { urls: 'stun:jitsi-meet.example.com:3478' },
-            { urls: 'stun:meet-jit-si-turnrelay.jitsi.net:443' }
+            { urls: 'stun:vcup.sanemind.de:443' }
         ]
 
         // Sets the ICE transport policy for the p2p connection. At the time
